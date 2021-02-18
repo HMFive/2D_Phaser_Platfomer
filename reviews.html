@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script/jquery-3.5.1.js"></script>
+    <script>
+      $(function () {
+        $("#nav-toggle").click(function () {
+          $("body").toggleClass("open");
+        });
+        $(document).ready(function () {
+          $("#rw").show("slow");
+        });
+        $("#eb").hover(
+          function () {
+            $("#name1").show("slow");
+          },
+          function () {
+            $("#name1").hide("slow");
+          }
+        );
+
+        $("#pm").hover(
+          function () {
+            $("#name2").show("slow");
+          },
+          function () {
+            $("#name2").hide("slow");
+          }
+        );
+      });
+    </script>
+    <style>
+      p {
+        padding-top: 85px;
+        font-family: helveticaItalic;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: underline;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 60px 0;
+      }
+
+      nav div img {
+        height: 200px;
+        width: 350px;
+        border: 3px solid #ddd;
+      }
+
+      nav > div:hover {
+        opacity: 0.7;
+      }
+      #name1,
+      #name2 {
+        padding-top: 15px;
+        color: white;
+        text-align: center;
+        font-size: 45px;
+        font-family: helveticaMedium;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #eb {
+        position: relative;
+      }
+
+      #pm {
+        position: relative;
+      }
+      footer{
+          height: 0;
+      }
+    </style>
+  </head>
+  <body  scroll="no" style="overflow: hidden">
+    <header>
+      <div id="siteName">
+        <h3>Yusuf's Personal Website</h3>
+      </div>
+    </header>
+
+    <div id="mainPart">
+      <div id="bgMain">
+        <div class="content">
+          <p id="rw" style="display: none;">REVIEWS</p>
+          <nav>
+            <div id="eb">
+              <a href="earthbound.html"
+                ><img src="images/earthbound.jpg" alt=""
+              /></a>
+              <div id="name1" style="display: none;">Earthbound</div>
+            </div>
+
+            <div id="pm">
+              <a href="papermario.html">
+                <img src="images/papermario.jpg" alt=""
+              /></a>
+              <div id="name2" style="display: none;">Paper Mario</div>
+            </div>
+          </nav>
+
+          <div id="top-head-inner">
+            <div id="nav-toggle">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <nav id="global-nav">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="game.html">GAME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+              </ul>
+            </nav>
+            <div id="nav-bg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>

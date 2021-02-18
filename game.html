@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>clone</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script/phaser.min.js"></script>
+  <script src="script/main.js"></script>
+  <script type="text/javascript" src="script/jquery-3.5.1.js"></script>
+  <script>
+    $(function () {
+      $("#nav-toggle").click(function () {
+        $("body").toggleClass("open");
+      });
+    });
+  </script>
+  <style>
+    canvas {
+      margin: 0 auto;
+    }
+    #game {
+     height: 1200px;
+      background-image: url("images/lc.jpg");
+background-size: contain;     
+    }
+  </style>
+</head>
+<body scroll="no" style="overflow: hidden">
+  <div id="up">
+    <div id="game"></div>
+  </div>
+
+  <div id="top-head-inner">
+    <div id="nav-toggle">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav id="global-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="reviews.html">REVIEWS</a></li>
+        <li><a href="game.html">GAME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <div id="nav-bg"></div>
+  </div>
+</body>

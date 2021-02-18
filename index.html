@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script/jquery-3.5.1.js"></script>
+    <script>
+      $(function () {
+        $("#nav-toggle").click(function () {
+          $("body").toggleClass("open");
+        });
+
+        $("#show").click(function () {
+          $("#guestb").show("slow");
+         
+        });
+
+        
+
+      });
+    </script>
+
+    <script>
+      $(function () {});
+    </script>
+  </head>
+  <body>
+    <header>
+      <div id="siteName">
+        <h3>Yusuf's Personal Website</h3>
+      </div>
+    </header>
+
+    <div id="mainPart">
+      <div id="bgMain">
+        <div id="wel">WELCOME <br> AND ENJOY</div>
+        <div class="content">
+          <div id="top-head-inner">
+            <div id="nav-toggle">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <nav id="global-nav">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="game.html">GAME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+              </ul>
+            </nav>
+            <div id="nav-bg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <form action="" name="guestBook">
+        <h2>Guest Book</h2>
+        <br /><br />
+        <p>Name</p>
+        <input type="text" id="name" />
+        <br /><br />
+        <p>Note</p>
+        <textarea name="" id="memory" cols="60" rows="10"></textarea>
+        <input type="button" value="SEND" class="btn" onclick="addToBook()" />
+        <input type="button" value="SHOW GUEST BOOK" class="btn" id="show" />
+      </form>
+      <form action="" id="guestBookShow">
+        <textarea
+          name=""
+          id="guestb"
+          cols="35"
+          rows="25"
+          style="display: none;"
+        ></textarea>
+      </form>
+    </footer>
+    <script>
+        function addToBook() {
+          var res = "Visitor " + guestBook.name.value + " Said " + "\n\n" +  guestBook.memory.value +"\n\n";
+
+          document.getElementById("guestb").innerHTML += res;
+          document.getElementById("guestb").style.color = "red";
+
+        }
+    </script>
+  </body>
+</html>
